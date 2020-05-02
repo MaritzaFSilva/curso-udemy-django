@@ -3,7 +3,7 @@
 Titulo bloco
 {% endblock %}
 {% block main %}
-Olá MundoOOO!!!!!!!!!!!!!!!!!
+<h1 class="programe_facil">Olá MundoOOO!!!!!!!!!!!!!!!!!</h1>
 
 
 
@@ -27,7 +27,12 @@ Olá MundoOOO!!!!!!!!!!!!!!!!!
         <li>Olá {{pessoa.nome}}</li>
     {% endif %}
 {% endfor %}
+</ul>
 
+<button class="btn btn-info" onClick="olaMundo()">Clique Aqui</button>
 
-{% include  'footer.html' %}
+{% endblock %}
+
+{% block footer %}
+    {% include  'footer.html' with pnome=nome %}
 {% endblock %}
