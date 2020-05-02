@@ -123,5 +123,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static_files'
 
 STATICFILES_DIRS = [
-    'meus_statics'
+    'meuProjeto/meus_statics'
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT =  'media_files'

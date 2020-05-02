@@ -25,6 +25,7 @@ class Empregado(models.Model):
     email = models.EmailField()
     cpf = models.OneToOneField(CPF, on_delete=models.CASCADE,blank=True, null=True)
     departamentos = models.ManyToManyField(Departamento, blank=True)
+    foto = models.ImageField(upload_to='cliente_fotos') #ao usar deve rodar o pip install pillow antes.
 
     def __str__(self):
         return self.nome

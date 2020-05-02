@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.conf.urls import url
 from clientes.views import clientes, cliente_detalhe, cliente_por_nome
 from .views import home
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', home ),
@@ -29,4 +31,4 @@ urlpatterns = [
     
     
     
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
